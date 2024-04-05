@@ -1,29 +1,30 @@
-<?php 
-    include 'globals.php';
+<?php
+include 'curl.php';
+include 'globals.php';
 
-    $name = "Danny";
-    $isDev = true;
-    $age = 20;
-    $newAge = (bool) 40;
-    $isOld = $age > 60;
-    $output = "Hola " . $name;
-    $outputAge = $isOld
+$name = "Danny";
+$isDev = true;
+$age = 20;
+$newAge = (bool) 40;
+$isOld = $age > 60;
+$output = "Hola " . $name;
+$outputAge = $isOld
     ? 'You are old'
     : 'You are young';
-    $outputAge2 = match(true) {
-        $age < 2 => 'You are a baby.',
-        $age < 10 => 'You are a kid.',
-        $age < 18 => 'You are an teen.',
-        default => 'You are an adult.',
-    };
-    $bestLanguages = ["PHP", "JavaScript", "Python"];
-    $bestLanguages[2] = "Java";
-    $bestLanguages[] = "TypeScript";
+$outputAge2 = match (true) {
+    $age < 2 => 'You are a baby.',
+    $age < 10 => 'You are a kid.',
+    $age < 18 => 'You are an teen.',
+    default => 'You are an adult.',
+};
+$bestLanguages = ["PHP", "JavaScript", "Python"];
+$bestLanguages[2] = "Java";
+$bestLanguages[] = "TypeScript";
 
-    var_dump($name);
-    echo gettype($name);
+var_dump($name);
+echo gettype($name);
 
-    const NOMBRE = 'Miguel';
+const NOMBRE = 'Miguel';
 ?>
 
 <?php if ($isOld) : ?>
@@ -52,9 +53,27 @@
     body {
         display: grid;
         place-content: center;
+        text-align: center;
     }
 
     .logo {
         width: 60px;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    hgroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        margin: 0 auto;
     }
 </style>
